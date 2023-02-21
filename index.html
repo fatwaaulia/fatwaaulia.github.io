@@ -7,7 +7,7 @@
     <title>Fatwa Aulia</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script>
         window.addEventListener("scroll", (event) => {
             let scroll = this.scrollY;
@@ -79,12 +79,12 @@
     </nav>
     
     <!-- Header content -->
-    <section>
+    <section class="mt-0">
     <div class="container-fluid img-style" id="home" style="background-image:url('assets/img/coding-man.jpg');height:100vh;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="position-relative" style="height:80vh">
+                    <div class="position-relative" style="height:100vh">
                         <div class="position-absolute top-50 translate-middle-y text-white">
                             <h1 class="fw-600">Hai, Saya Fatwa Aulia</h1>
                             <h3>Fullstack Web Developer</h3>
@@ -128,49 +128,66 @@
                     <p>Project yang telah dikerjakan.</p>
                 </div>
             </div>
+            <style>
+            .img-portfolio {
+                transition: .4s;
+                filter: grayscale(1);
+                width: 80%;
+            }
+            .img-portfolio:hover {
+                transform: scale(1.1);
+                filter: none;
+            }
+            </style>
             <div class="row">
-                <div class="col-lg-2 col-md-3 col-4 text-center">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <img src="assets/img/portfolio/the_sultan_croffle.png" class="img-portfolio" style="width:80%;">
+                <div class="col-lg-2 col-md-3 col-4 center-x-y">
+                    <a href="#">
+                        <img src="assets/img/portfolio/the_sultan_croffle.png" class="img-portfolio">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 center-x-y">
+                    <a href="#">
+                        <img src="assets/img/portfolio/spe_its.png" class="img-portfolio">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 center-x-y">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#himatekk_its">
+                        <img src="assets/img/portfolio/himatekk_its.png" class="img-portfolio">
                     </a>
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="himatekk_its" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">E-Commerce</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Organization</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div id="carouselExample" class="carousel slide">
+                                    <div id="carouselExampleIndicators" class="carousel slide">
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                          </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="assets/img/web-design.png" class="d-block w-100" alt="...">
-                                            </div>
-                                            <div class="carousel-item active">
-                                                <img src="assets/img/home-right.png" class="d-block w-100" alt="...">
-                                            </div>
+                                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="assets/img/portfolio/preview/himatekk_its_1.png" class="d-block w-100">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/img/portfolio/preview/himatekk_its_2.png" class="d-block w-100">
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
                                         </button>
-                                    </div>
-                                </div>
+                                      </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-4 text-center">
-                    <img src="assets/img/portfolio/spe_its.png" class="img-portfolio" style="width:80%;">
                 </div>
             </div>
         </div>
@@ -231,24 +248,56 @@
     </div>
     </section>
 
-    <footer class="mt-5 bg-dark text-white" style="padding-top:50px">
+    <footer class="mt-5 text-white" style="padding-top:75px;background-color:#181248">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 mb-3">
-                <h3 clas="fw-700">Fatwa Aulia</h3>
+                <h3>Fatwa Aulia</h3>
                 Jasa digitalisasi proses bisnis Anda. Pembuatan Website.
             </div>
-            <!-- <div class="col-lg-3 mb-3">
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe width="100%" height="100%" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12852.91299288507!2d114.14529278467859!3d-8.363401007583029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sid!4v1674445598506!5m2!1sen!2sid" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                        <a href="https://2yu.co">2yu</a><br>
-                        <style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style>
-                        <a href="https://embedgooglemap.2yu.co/">html embed google map</a>
-                        <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+            <div class="col-lg-1">
+                <!--  -->
+            </div>
+            <div class="col-lg-3 mb-3">
+                <style>
+                .slider {transition:.5s}
+                .slider:hover {margin-left:7px}
+                </style>
+                <p class="fw-600">Main</p>
+                <div class="mb-1">
+                    <a href="#about">
+                        <span class="slider text-secondary">About</span>
+                    </a>
+                </div>
+                <div class="mb-1">
+                    <a href="#portfolio">
+                        <span class="slider text-secondary">Portfolio</span>
+                    </a>
+                </div>
+                <div class="mb-1">
+                    <a href="#contact">
+                        <span class="slider text-secondary">Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <!--  -->
+            </div>
+            <div class="col-lg-3">
+                <p class="fw-600">Social Media</p>
+                <div class="row">
+                    <div class="col-2">
+                        <a href="https://instagram.com/ftwaulia" target="_blank">
+                            <img src="assets/img/instagram.png" class="wh-40" alt="instagram">
+                        </a>
+                    </div>
+                    <div class="col-2">
+                        <a href="https://www.linkedin.com/in/fatwa-aulia-16310524b/" target="_blank">
+                            <img src="assets/img/linkedin.png" class="wh-40" alt="linkedin">
+                        </a>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         <hr>
         <div class="row pb-3">
