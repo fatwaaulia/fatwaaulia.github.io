@@ -76,8 +76,26 @@
                 <div class="col-lg-6">
                     <div class="position-relative" style="height:100vh">
                         <div class="position-absolute top-50 translate-middle-y text-white">
-                            <h1 class="fw-600 wow fadeInUp">Hai, Saya Fatwa Aulia</h1>
-                            <h3 class="wow fadeInUp">Fullstack Web Developer</h3>
+                            <h1 class="fw-600 wow fadeInUp" id="text"></h1>
+                            <h3 id="text_2"></h3>
+                            <script>
+                            var looping = 0;
+                            var looping_2 = 0;
+                            text = "Hai, Saya Fatwa Aulia";
+                            text_2 = "Fullstack Web Developer";
+                            function ketik() {
+                                if(looping < text.length){
+                                    document.getElementById("text").innerHTML += text.charAt(looping);
+                                    looping++;
+                                    setTimeout(ketik,100);
+                                }else if(looping_2 < text_2.length) {
+                                    document.getElementById("text_2").innerHTML += text_2.charAt(looping_2);
+                                    looping_2++;
+                                    setTimeout(ketik,100);
+                                }
+                            }
+                            ketik();
+                            </script>
                         </div>
                     </div>
                 </div>
