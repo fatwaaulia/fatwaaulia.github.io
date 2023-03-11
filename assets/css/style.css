@@ -7,21 +7,15 @@
     width: 10px;
     height:10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
     background: #fff;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius:15px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #3b7ddd;
+    background: #16213E;
 }
 
 /* SETTING */
@@ -30,8 +24,8 @@ body {
 }
 
 section {
-    margin-top:100px;
-    margin-bottom:100px;
+    padding-top:70px;
+    padding-bottom:70px;
 }
 
 h1,h2,h3,h4,h5,h6,p,span,a,div,button,label {
