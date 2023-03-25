@@ -117,7 +117,7 @@
         </div>
     </div>
 
-    <!-- about -->
+    <!-- About -->
     <section style="background-color:#EEF1FF">
     <div class="container" id="about">
         <div class="row">
@@ -129,27 +129,24 @@
                 </p>
                 <h3 class="fw-600 my-4 wow fadeInUp">Technology</h3>
                 <div class="row">
-                    <div class="col-lg-2 col-md-2 col-3 center-x-y mb-3">
-                        <img src="assets/img/html.png" class="w-100 wow fadeInUp">
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-3 center-x-y mb-3">
-                        <img src="assets/img/css.png" class="w-100 wow fadeInUp">
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-3 center-x-y mb-3">
-                        <img src="assets/img/js.png" class="w-100 wow fadeInUp">
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-3 center-x-y mb-3">
-                        <img src="assets/img/git.png" class="w-100 wow fadeInUp">
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-3 center-x-y mb-3">
-                        <img src="assets/img/php.png" class="w-100 wow fadeInUp">
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-3 center-x-y mb-3">
-                        <img src="assets/img/codeigniter.png" class="w-100 wow fadeInUp">
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-3 center-x-y mb-3">
-                        <img src="assets/img/mysql.png" class="w-100 wow fadeInUp">
-                    </div>
+                    <script>
+                    const technology = [
+                        'html.png',
+                        'css.png',
+                        'js.png',
+                        'git.png',
+                        'php.png',
+                        'codeigniter.png',
+                        'mysql.png',
+                    ]
+                    for (let i = 0; i < technology.length; i++) {
+                        document.write(`
+                        <div class="col-lg-2 col-md-2 col-3 center-x-y mb-3">
+                            <img src="assets/img/${technology[i]}" class="w-100 wow fadeInUp">
+                        </div>
+                        `)
+                    }
+                    </script>
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
