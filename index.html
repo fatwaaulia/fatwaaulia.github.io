@@ -182,95 +182,84 @@
         }
         </style>
         <div class="row">
-            <!-- The Sultan Croffle -->
-            <div class="col-lg-2 col-md-3 col-6 mb-4 center-x-y">
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#the_sultan_croffle">
-                    <img src="assets/img/portfolio/the_sultan_croffle.png" class="img-portfolio wow fadeInUp" loading="lazy" alt="portfolio">
-                </a>
-                <!-- Modal -->
-                <div class="modal fade" id="the_sultan_croffle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">THE SULTAN CROFFLE</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="carouselExample" class="carousel slide">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="assets/img/portfolio/preview/the_sultan_scroffle_1.png" class="d-block w-100" loading="lazy">
+            <script>
+            const portfolio = [
+                {
+                    id: 1,
+                    name: 'The Sultan Croffle',
+                    slug: 'the_sultan_croffle',
+                    img_name: 'the_sultan_croffle.png',
+                    preview: [
+                        'the_sultan_scroffle_1.png',
+                        'the_sultan_scroffle_2.png',
+                        'the_sultan_scroffle_3.png',
+                    ]
+                },
+                {
+                    id: 2,
+                    name: 'SPE ITS',
+                    slug: 'spe-its',
+                    img_name: 'spe_its.png',
+                    preview: ['']
+                },
+                {
+                    id: 3,
+                    name: 'HIMATEKK ITS',
+                    slug: 'himatekk-its',
+                    img_name: 'himatekk_its.png',
+                    preview: [
+                        'himatekk_its_1.png',
+                        'himatekk_its_2.png',
+                        'himatekk_its_3.png',
+                        'himatekk_its_4.png',
+                    ]
+                },
+            ]
+            portfolio.forEach(element => {
+                document.write(`
+                <div class="col-lg-2 col-md-3 col-6 mb-4 center-x-y">
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#project_${element.slug}">
+                        <img src="assets/img/portfolio/${element.img_name}" class="img-portfolio wow fadeInUp" loading="lazy" alt="${element.name}" title="${element.name}">
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="project_${element.slug}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">${element.name}</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="${element.slug}" class="carousel slide"> 
+                                        <div class="carousel-inner">
+                `); 
+                let preview = element.preview;
+                for(let i = 0; i < preview.length; i++) {
+                    document.write(`
+                                            <div class="carousel-item ${i == 0 ? 'active' : ''}">
+                                                <img src="assets/img/portfolio/preview/${preview[i]}" class="d-block w-100" loading="lazy">
+                                            </div>
+                    `); 
+                }
+                document.write(`
                                         </div>
-                                        <div class="carousel-item">
-                                            <img src="assets/img/portfolio/preview/the_sultan_scroffle_2.png" class="d-block w-100" loading="lazy">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="assets/img/portfolio/preview/the_sultan_scroffle_3.png" class="d-block w-100" loading="lazy">
-                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#${element.slug}" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#${element.slug}" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
                                     </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- SPE ITS -->
-            <div class="col-lg-2 col-md-3 col-6 mb-4 center-x-y">
-                <a href="#!">
-                    <img src="assets/img/portfolio/spe_its.png" class="img-portfolio wow fadeInUp" loading="lazy" alt="portfolio">
-                </a>
-            </div>
-            <!-- HIMATEKK ITS -->
-            <div class="col-lg-2 col-md-3 col-6 mb-4 center-x-y">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#himatekk_its">
-                    <img src="assets/img/portfolio/himatekk_its.png" class="img-portfolio wow fadeInUp" loading="lazy" alt="portfolio">
-                </a>
-                <!-- Modal -->
-                <div class="modal fade" id="himatekk_its" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">HIMATEKK ITS</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="carouselExample3" class="carousel slide">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="assets/img/portfolio/preview/himatekk_its_1.png" class="d-block w-100" loading="lazy">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="assets/img/portfolio/preview/himatekk_its_2.png" class="d-block w-100" loading="lazy">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="assets/img/portfolio/preview/himatekk_its_3.png" class="d-block w-100" loading="lazy">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="assets/img/portfolio/preview/himatekk_its_4.png" class="d-block w-100" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                `) 
+            });
+            </script>
         </div>
     </div>
     </section>
