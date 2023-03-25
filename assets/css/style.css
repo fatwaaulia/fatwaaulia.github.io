@@ -22,25 +22,20 @@
 body {
     background-color:#f5f7fb!important;
 }
-
 section {
     padding-top:50px;
     padding-bottom:50px;
 }
-
 h1,h2,h3,h4,h5,h6,p,span,a,div,button,label {
     font-family: 'Poppins', sans-serif!important;
     letter-spacing: 0.3px!important;
 }
-
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-
 img, video, iframe {
     border-radius: 0.25rem;
 }
-
 a {
     text-decoration: none!important;
     color: unset;
@@ -95,7 +90,6 @@ a {
 .card {
     border: 0px;
 }
-
 .card-shadow-hover {
     transition: .5s;
 }

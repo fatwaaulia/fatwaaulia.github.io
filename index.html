@@ -28,7 +28,7 @@
 </head>
 <body>
     <script>
-        setTimeout(function() {
+        setTimeout(() => {
             $('.loader-bg').fadeToggle();
         });
     </script>
@@ -94,7 +94,7 @@
                             var looping_2 = 0;
                             text = "Hai, Saya Fatwa Aulia";
                             text_2 = "Fullstack Web Developer";
-                            function ketik() {
+                            const ketik = () => {
                                 if(looping < text.length){
                                     document.getElementById("text").innerHTML += text.charAt(looping);
                                     looping++;
