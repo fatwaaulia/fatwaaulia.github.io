@@ -329,7 +329,7 @@
                 `); 
                 for(let i = 0; i < certificate.length; i++) {
                     document.write(`
-                                            <button type="button" data-bs-target="#${element.slug}" data-bs-slide-to="${i}" class="${i == 0 ? 'active' : ''}" aria-current="true" aria-label="Slide ${i}"></button>
+                                            <button type="button" data-bs-target="#${element.slug}" data-bs-slide-to="${i}" class="${element.id == i ? 'active' : ''}" aria-current="true" aria-label="Slide ${i}"></button>
                     `); 
                 }
                 document.write(`
