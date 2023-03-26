@@ -97,6 +97,16 @@ a {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
 }
 
+.carousel-control-next-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/130/130884.png');
+}
+.carousel-control-prev-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/130/130882.png');
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #16213E;
+}
+
 
 
 
