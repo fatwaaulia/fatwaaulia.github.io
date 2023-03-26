@@ -228,9 +228,18 @@
                                 </div>
                                 <div class="modal-body">
                                     <div id="${element.slug}" class="carousel slide"> 
-                                        <div class="carousel-inner">
+                                        <div class="carousel-indicators">
                 `); 
                 let preview = element.preview;
+                for(let i = 0; i < preview.length; i++) {
+                    document.write(`
+                                            <button type="button" data-bs-target="#${element.slug}" data-bs-slide-to="${i}" class="${i == 0 ? 'active' : ''}" aria-current="true" aria-label="Slide ${i}"></button>
+                    `); 
+                }
+                document.write(`
+                                        </div>
+                                        <div class="carousel-inner">
+                `); 
                 for(let i = 0; i < preview.length; i++) {
                     document.write(`
                                             <div class="carousel-item ${i == 0 ? 'active' : ''}">
