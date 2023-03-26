@@ -70,7 +70,7 @@
                         <a class="nav-link" aria-current="page" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#certificate">Sertificate</a>
+                        <a class="nav-link" aria-current="page" href="#certificate">Certificate</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#contact">Contact</a>
@@ -294,34 +294,66 @@
             <script>
             const certificate = [
                 {
-                    id: 1,
+                    id: 0,
+                    slug: 'vsga-jwd-2022',
                     img_name: 'vsga-jwd-2022.jpg',
                 },
                 {
-                    id: 2,
+                    id: 1,
+                    slug: 'dicoding-dasar-pemrograman-untuk-menjadi-pengembang-software',
                     img_name: 'dicoding-dasar-pemrograman-untuk-menjadi-pengembang-software.jpg',
                 },
                 {
-                    id: 3,
+                    id: 2,
+                    slug: 'dicoding-dasar-pemrograman-web',
                     img_name: 'dicoding-dasar-pemrograman-web.jpg',
                 },
             ];
             certificate.forEach(element => {
                 document.write(`
                 <div class="col-lg-2 col-md-3 col-6 mb-4 center-x-y">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#sertificate_${element.id}">
-                        <img src="assets/img/sertificate/${element.img_name}" class="img-certificate wow fadeInUp" loading="lazy" alt="sertificate">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#certificate_${element.id}">
+                        <img src="assets/img/certificate/${element.img_name}" class="img-certificate wow fadeInUp" loading="lazy" alt="certificate">
                     </a>
                     <!-- Modal -->
-                    <div class="modal fade" id="sertificate_${element.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="certificate_${element.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">SERTIFICATE</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">certificate</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="assets/img/sertificate/${element.img_name}" class="d-block w-100" loading="lazy">
+                                    <div id="${element.slug}" class="carousel slide"> 
+                                        <div class="carousel-indicators">
+                `); 
+                for(let i = 0; i < certificate.length; i++) {
+                    document.write(`
+                                            <button type="button" data-bs-target="#${element.slug}" data-bs-slide-to="${i}" class="${i == 0 ? 'active' : ''}" aria-current="true" aria-label="Slide ${i}"></button>
+                    `); 
+                }
+                document.write(`
+                                        </div>
+                                        <div class="carousel-inner">
+                `); 
+                for(let i = 0; i < certificate.length; i++) {
+                    document.write(`
+                                            <div class="carousel-item ${element.id == i ? 'active' : ''}">
+                                                <img src="assets/img/certificate/${certificate[i].img_name}" class="d-block w-100" loading="lazy">
+                                            </div>
+                    `); 
+                }
+                document.write(`
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#${element.slug}" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#${element.slug}" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
