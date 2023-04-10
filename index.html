@@ -115,7 +115,7 @@
     </div>
 
     <!-- About -->
-    <section style="background-color:#EEF1FF;padding-bottom: 40px;">
+    <section style="background-color:#EEF1FF;">
     <div class="container" id="about">
         <div class="row">
             <div class="col-lg-6">
@@ -125,7 +125,7 @@
                     Saya memiliki keahlian dalam pengembangan <b>Aplikasi Berbasis Website.</b>
                 </p>
                 <h3 class="fw-600 my-4 wow fadeInUp">Technology</h3>
-                <div class="row">
+                <div class="row row-gap-4">
                     <script>
                     const technology = [
                         'html.png',
@@ -138,7 +138,7 @@
                     ]
                     for (let i = 0; i < technology.length; i++) {
                         document.write(`
-                        <div class="col-lg-2 col-md-2 col-3 center-xy mb-4">
+                        <div class="col-lg-2 col-md-2 col-3 center-xy">
                             <img src="assets/img/${technology[i]}" class="wow fadeInUp w-100">
                         </div>
                         `)
@@ -157,7 +157,7 @@
 
     <!-- Portfolio -->
     <section>
-    <div class="container pb-n4" id="portfolio">
+    <div class="container" id="portfolio">
         <div class="row mb-4">
             <div class="col-lg-12 text-center wow fadeInUp">
                 <h1 class="fw-600">Portfolio</h1>
@@ -175,7 +175,7 @@
             filter: none;
         }
         </style>
-        <div class="row">
+        <div class="row row-gap-4">
             <script>
             const portfolio = [
                 {
@@ -221,7 +221,7 @@
             ]
             portfolio.forEach(element => {
                 document.write(`
-                <div class="col-lg-2 col-md-4 col-6 gx-4 mb-4 center-xy">
+                <div class="col-lg-2 col-md-4 col-6 center-xy">
                     <a href="#!" data-bs-toggle="modal" data-bs-target="#project_${element.slug}">
                         <img src="assets/img/portfolio/${element.img_name}" class="img-portfolio wow fadeInUp" loading="lazy" alt="${element.name}" title="${element.name}">
                     </a>
@@ -279,7 +279,7 @@
 
     <!-- Certificate -->
     <section style="background-color:#EEF1FF">
-    <div class="container pb-n4" id="certificate">
+    <div class="container" id="certificate">
         <div class="row mb-4">
             <div class="col-lg-12 text-center wow fadeInUp">
                 <h1 class="fw-600">Certificate</h1>
@@ -296,7 +296,7 @@
             filter: none;
         }
         </style>
-        <div class="row">
+        <div class="row row-gap-4">
             <script>
             const certificate = [
                 {
@@ -317,7 +317,7 @@
             ];
             certificate.forEach(element => {
                 document.write(`
-                <div class="col-lg-2 col-md-3 col-6 gx-4 mb-4 center-xy">
+                <div class="col-lg-2 col-md-3 col-6 center-xy">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#certificate_${element.id}">
                         <img src="assets/img/certificate/${element.img_name}" class="img-certificate wow fadeInUp" loading="lazy" alt="certificate">
                     </a>
