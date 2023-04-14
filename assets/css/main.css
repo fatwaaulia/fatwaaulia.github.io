@@ -18,7 +18,6 @@
     background: #16213E;
 }
 
-/* SETTING */
 body {
     background-color:#f5f7fb!important;
 }
@@ -47,8 +46,6 @@ a {
     justify-content: center;
     align-items: center;
 }
-
-/* IMAGE STYLE */
 .img-style {
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,8 +53,6 @@ a {
     background-position-x: center;
     object-fit: cover;
 }
-
-/* WIDTH HEIGHT */
 .wh-40 {
     width: 40px!important;
     height: 40px!important;
@@ -74,13 +69,11 @@ a {
     width: 150px!important;
     height: 150px!important;
 }
-
-/* FONT WEIGHT */
 .fw-500 {font-weight: 500;}
 .fw-600 {font-weight: 600;}
 .fw-700 {font-weight: 700;}
 
-/* BOOTSTRAP */
+/* Bootstrap */
 @media (min-width: 992px) { 
     .w-lg-50 {
         width: 50%;
@@ -107,19 +100,7 @@ a {
     background-color: #16213E;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*CUSTOM PRELOADER*/
+/* Preloader */
 .loader-bg {
     position: fixed;
     z-index: 999999;
@@ -127,7 +108,6 @@ a {
     width: 100%;
     height: 100%;
 }
-
 .loader-p {
     border: 0 solid transparent;
     border-radius: 50%;
@@ -137,7 +117,6 @@ a {
     top: calc(50vh - 75px);
     left: calc(50vw - 75px);
 }
-
 .loader-p:before,
 .loader-p:after {
     content: '';
@@ -151,11 +130,9 @@ a {
     animation: loader 2s linear infinite;
     opacity: 0;
 }
-
 .loader-p:before {
     animation-delay: 0.5s;
 }
-
 @keyframes loader {
     0% {
         transform: scale(0);
