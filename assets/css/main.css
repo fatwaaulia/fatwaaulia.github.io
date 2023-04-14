@@ -40,6 +40,9 @@ a {
     color: unset;
     transition: .2s;
 }
+a:hover {
+    color: #3b7ddd!important;
+}
 
 .center-xy {
     display: flex;
