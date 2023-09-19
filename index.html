@@ -80,41 +80,55 @@
     </nav>
     
     <!-- Header content -->
-    <div class="container-fluid img-style" id="home" style="height:100vh;background-image:url('assets/img/bg-header.jpg');">
+    <style>
+    .header {
+        background-image: url('assets/img/bg-header.jpg');
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background-attachment: fixed;
+    }
+    .header-title {
+        position: relative;
+    }
+    </style>
+    <div class="container-fluid header img-style">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="position-relative" style="height:100vh">
-                        <div class="position-absolute top-50 translate-middle-y text-white">
-                            <h1 class="fw-600 wow fadeInUp" id="text"></h1>
-                            <h4 id="text_2" style="min-height:33.6px"></h4>
-                            <script>
-                            var looping = 0;
-                            var looping_2 = 0;
-                            text = "Hai, Saya Fatwa Aulia";
-                            text_2 = "Fullstack Web Developer";
-                            const ketik = () => {
-                                if(looping < text.length){
-                                    document.getElementById("text").innerHTML += text.charAt(looping);
-                                    looping++;
-                                    setTimeout(ketik,100);
-                                }else if(looping_2 < text_2.length) {
-                                    document.getElementById("text_2").innerHTML += text_2.charAt(looping_2);
-                                    looping_2++;
-                                    setTimeout(ketik,100);
-                                }
+                <div class="col-lg-5 text-white">
+                    <div class="header-title">
+                        <h1 class="fw-600 wow fadeInUp" id="text"></h1>
+                        <h4 id="text_2" style="min-height:33.6px"></h4>
+                        <script>
+                        var looping = 0;
+                        var looping_2 = 0;
+                        text = "Hai, Saya Fatwa Aulia";
+                        text_2 = "Fullstack Web Developer";
+                        const ketik = () => {
+                            if(looping < text.length){
+                                document.getElementById("text").innerHTML += text.charAt(looping);
+                                looping++;
+                                setTimeout(ketik,100);
+                            }else if(looping_2 < text_2.length) {
+                                document.getElementById("text_2").innerHTML += text_2.charAt(looping_2);
+                                looping_2++;
+                                setTimeout(ketik,100);
                             }
-                            ketik();
-                            </script>
-                        </div>
+                        }
+                        ketik();
+                        </script>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <!--  -->
                 </div>
             </div>
         </div>
     </div>
+    <script>
+    $(document).scroll(() => {
+        $('.header-title').css({
+        'bottom': -($(this).scrollTop() / 1.75) + "px"
+        });
+    });
+    </script>
 
     <!-- About -->
     <section style="background-color:#EEF1FF;">
