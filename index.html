@@ -198,40 +198,49 @@
                     id: 1,
                     name: 'The Sultan Croffle',
                     slug: 'the_sultan_croffle',
-                    img_name: 'the_sultan_croffle.png',
+                    img: 'the-sultan-croffle.png',
                     preview: [
-                        'the_sultan_scroffle_1.png',
-                        'the_sultan_scroffle_2.png',
-                        'the_sultan_scroffle_3.png',
+                        'the-sultan-croffle_1.jpg',
+                        'the-sultan-croffle_2.jpg',
+                        'the-sultan-croffle_3.jpg',
                     ]
                 },
                 {
                     id: 2,
                     name: 'SPE ITS',
                     slug: 'spe-its',
-                    img_name: 'spe_its.png',
+                    img: 'spe-its.png',
                     preview: ['default.png']
                 },
                 {
                     id: 3,
                     name: 'HIMATEKK ITS',
                     slug: 'himatekk-its',
-                    img_name: 'himatekk_its.png',
+                    img: 'himatekk-its.png',
                     preview: [
-                        'himatekk_its_1.png',
-                        'himatekk_its_2.png',
-                        'himatekk_its_3.png',
-                        'himatekk_its_4.png',
+                        'himatekk-its_1.jpg',
+                        'himatekk-its_2.jpg',
+                        'himatekk-its_3.jpg',
+                        'himatekk-its_4.jpg',
                     ]
                 },
                 {
-                    id: 3,
+                    id: 4,
                     name: 'Health Cardio Apps',
                     slug: 'health-cardio-apps',
-                    img_name: 'health_cardio_apps.png',
+                    img: 'health-cardio-apps.png',
                     preview: [
-                        'health_cardio_apps_1.png',
-                        'health_cardio_apps_2.png',
+                        'health-cardio-apps_1.jpg',
+                        'health-cardio-apps_2.jpg',
+                    ]
+                },
+                {
+                    id: 5,
+                    name: 'Alishom Baitullah Journey',
+                    slug: 'alishom-baitullah-journey',
+                    img: 'alishom-baitullah-journey.png',
+                    preview: [
+                        'alishom-baitullah-journey_1.jpg',
                     ]
                 },
             ].sort( () => .5 - Math.random() );
@@ -239,7 +248,7 @@
                 document.write(`
                 <div class="col-lg-2 col-md-4 col-6 center-xy">
                     <a href="#!" data-bs-toggle="modal" data-bs-target="#project_${element.slug}">
-                        <img src="assets/img/portfolio/${element.img_name}" class="img-portfolio wow fadeInUp" loading="lazy" alt="${element.name}" title="${element.name}">
+                        <img src="assets/img/portfolio/${element.img}" class="img-portfolio wow fadeInUp" loading="lazy" alt="${element.name}" title="${element.name}">
                     </a>
                     <!-- Modal -->
                     <div class="modal fade" id="project_${element.slug}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -318,34 +327,34 @@
                 {
                     id: 0,
                     slug: 'vsga-jwd-2022',
-                    img_name: 'vsga-jwd-2022.jpg',
+                    img: 'vsga-jwd-2022.jpg',
                 },
                 {
                     id: 1,
                     slug: 'dicoding-dasar-pemrograman-untuk-menjadi-pengembang-software',
-                    img_name: 'dicoding-dasar-pemrograman-untuk-menjadi-pengembang-software.jpg',
+                    img: 'dicoding-dasar-pemrograman-untuk-menjadi-pengembang-software.jpg',
                 },
                 {
                     id: 2,
                     slug: 'dicoding-dasar-pemrograman-web',
-                    img_name: 'dicoding-dasar-pemrograman-web.jpg',
+                    img: 'dicoding-dasar-pemrograman-web.jpg',
                 },
                 {
                     id: 3,
                     slug: 'dicoding-front-end-web-deveoper-expert',
-                    img_name: 'dicoding-front-end-web-deveoper-expert.jpg',
+                    img: 'dicoding-front-end-web-deveoper-expert.jpg',
                 },
                 {
                     id: 4,
                     slug: 'dicoding-dasar-manajemen-proyek',
-                    img_name: 'dicoding-dasar-manajemen-proyek.jpg',
+                    img: 'dicoding-dasar-manajemen-proyek.jpg',
                 },
             ];
             certificate.forEach(element => {
                 document.write(`
                 <div class="col-lg-2 col-md-3 col-6 center-xy">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#certificate_${element.id}">
-                        <img src="assets/img/certificate/${element.img_name}" class="img-certificate wow fadeInUp" loading="lazy" alt="certificate">
+                        <img src="assets/img/certificate/${element.img}" class="img-certificate wow fadeInUp" loading="lazy" alt="certificate">
                     </a>
                     <!-- Modal -->
                     <div class="modal fade" id="certificate_${element.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -371,7 +380,7 @@
                 for(let i = 0; i < certificate.length; i++) {
                     document.write(`
                                             <div class="carousel-item ${element.id == i ? 'active' : ''}">
-                                                <img src="assets/img/certificate/${certificate[i].img_name}" class="d-block w-100" loading="lazy">
+                                                <img src="assets/img/certificate/${certificate[i].img}" class="d-block w-100" loading="lazy">
                                             </div>
                     `); 
                 }
