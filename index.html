@@ -155,6 +155,18 @@
     </script>
 
     <!-- About -->
+    <style>
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .animate-bounce { animation: bounce 2s infinite; }
+    </style>
     <section style="background-color:#EEF1FF;" class="position-relative">
     <div class="container" id="about">
         <div class="row">
@@ -190,9 +202,9 @@
                     </script>
                 </div>
             </div>
-            <div class="col-lg-6 d-none d-lg-block">
+            <div class="col-lg-6 d-none d-lg-block d-flex justify-content-center align-content-center">
                 <div class="text-center mt-3">
-                    <img src="assets/img/web-development.png" class="w-50 wow fadeInUp">
+                    <img src="assets/img/web-development.png" class="w-50 animate-bounce">
                 </div>
             </div>
         </div>
