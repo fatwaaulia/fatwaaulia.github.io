@@ -164,22 +164,26 @@
                     Saya merupakan <b>mahasiswa aktif</b> program studi <b>D4 Teknologi Rekayasa Perangkat Lunak.</b>
                     Saya memiliki antusias dan minat tinggi dibidang <b>Teknologi Informasi</b> yang didukung dengan pengalaman dalam pengembangan <b>Aplikasi Berbasis Web</b> yang pernah saya kerjakan.
                 </p>
-                <h3 class="fw-600 my-4 wow fadeInUp">Technology</h3>
+                <div class="my-4">
+                    <h2 class="fw-600 wow fadeInUp">Skills</h2>
+                    <p>Programming Languages & Tools</p>
+                </div>
                 <div class="row row-gap-4">
                     <script>
-                    const technology = [
+                    const skills = [
                         'html.png',
                         'css.png',
                         'js.png',
                         'git.png',
+                        'bootstrap.png',
                         'php.png',
                         'codeigniter.png',
                         'mysql.png',
                     ]
-                    for (let i = 0; i < technology.length; i++) {
+                    for (let i = 0; i < skills.length; i++) {
                         document.write(`
                         <div class="col-lg-2 col-md-2 col-3 center-xy">
-                            <img src="assets/img/${technology[i]}" class="wow fadeInUp w-100">
+                            <img src="assets/img/skills/${skills[i]}" class="wow fadeInUp w-100">
                         </div>
                         `)
                     }
