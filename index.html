@@ -164,8 +164,12 @@
             transform: translateY(-10px);
         }
     }
-
     .animate-bounce { animation: bounce 2s infinite; }
+    .sosial-media img {
+        filter: grayscale(100%);
+        transition: .3s;
+    }
+    .sosial-media:hover img { filter: grayscale(0%); }
     </style>
     <section style="background-color:#EEF1FF;" class="position-relative">
     <div class="container" id="about">
@@ -176,6 +180,14 @@
                     Saya merupakan <b>mahasiswa aktif</b> program studi <b>D4 Teknologi Rekayasa Perangkat Lunak.</b>
                     Saya memiliki antusias dan minat tinggi dibidang <b>Teknologi Informasi</b> yang didukung dengan pengalaman dalam pengembangan <b>Aplikasi Berbasis Web</b> yang pernah saya kerjakan.
                 </p>
+                <div>
+                    <a href="https://www.linkedin.com/in/fatwaaulia/" class="sosial-media" target="_blank">
+                        <img src="assets/img/linkedin.png" class="wh-50 me-3" alt="linkedin">
+                    </a>
+                    <a href="https://github.com/fatwaaulia/" class="sosial-media" target="_blank">
+                        <img src="assets/img/github.png" class="wh-50" alt="github">
+                    </a>
+                </div>
                 <div class="my-4">
                     <h2 class="fw-600 wow fadeInUp">Skills</h2>
                     <p>Programming Languages & Tools</p>
@@ -312,7 +324,7 @@
             ].sort( () => .5 - Math.random() );
             portfolio.forEach(element => {
                 document.write(`
-                <div class="col-lg-2 col-md-4 col-6 center-xy">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6 center-xy">
                     <a href="#!" data-bs-toggle="modal" data-bs-target="#project_${element.slug}">
                         <img src="assets/img/portfolio/${element.img}" class="img-portfolio wow fadeInUp" loading="lazy" alt="${element.name}" title="${element.name}">
                     </a>
