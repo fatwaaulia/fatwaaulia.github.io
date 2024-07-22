@@ -64,25 +64,25 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
-                    </li>
                     <style>
                         #about,#portfolio,#certificate,#contact {
                             scroll-margin-top: 90px;
                         }
                     </style>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#about">About</a>
+                        <a class="nav-link scroll-link" href="#" data-target="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#portfolio">Portfolio</a>
+                        <a class="nav-link scroll-link" href="#" data-target="about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#certificate">Certificate</a>
+                        <a class="nav-link scroll-link" href="#" data-target="portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+                        <a class="nav-link scroll-link" href="#" data-target="certificate">Certificate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#" data-contact="portfolio">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -101,6 +101,18 @@
             }
         }
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.scroll-link');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                let targetId = this.getAttribute('data-target');
+                let targetElement = document.getElementById(targetId);
+                if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    });
     </script>
     
     <!-- Header content -->
@@ -116,7 +128,7 @@
         position: relative;
     }
     </style>
-    <div class="container-fluid header img-style">
+    <div class="container-fluid header img-style" id="home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 text-white">
@@ -500,7 +512,7 @@
                 <div class="row wow fadeInUp">
                     <div class="col-12 text-lg-start">
                         <img src="assets/img/office.png" class="wh-40 me-3" loading="lazy">
-                        <span class="fw-600">Genteng - Banyuwangi.</span>
+                        <span class="fw-600">Genteng, Banyuwangi</span>
                     </div>
                 </div>
             </div>
