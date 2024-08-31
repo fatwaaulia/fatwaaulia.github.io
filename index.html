@@ -14,10 +14,9 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <title>Fatwa Aulia | Portfolio</title>
 
+    <!-- Source -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-
-    <!-- JQUERY -->
     <script src="assets/js/jquery.min.js"></script>
 
     <!-- ON SCROLL ANIMATE -->
@@ -219,7 +218,7 @@
                     for (let i = 0; i < skills.length; i++) {
                         document.write(`
                         <div class="col-lg-2 col-md-2 col-3 center-xy">
-                            <img src="assets/img/skills/${skills[i]}" class="wow fadeInUp w-100">
+                            <img src="assets/img/loading.gif" data-original="assets/img/skills/${skills[i]}" class="wow fadeInUp w-100 lazy">
                         </div>
                         `)
                     }
@@ -340,7 +339,7 @@
                 document.write(`
                 <div class="col-xl-2 col-lg-3 col-md-4 col-6 center-xy">
                     <a href="#!" data-bs-toggle="modal" data-bs-target="#project_${element.slug}">
-                        <img src="assets/img/portfolio/${element.img}" class="img-portfolio wow fadeInUp" loading="lazy" alt="${element.name}" title="${element.name}">
+                        <img src="assets/img/loading.gif" data-original="assets/img/portfolio/${element.img}" class="img-portfolio wow fadeInUp lazy" loading="lazy" alt="${element.name}" title="${element.name}">
                     </a>
                     <!-- Modal -->
                     <div class="modal fade" id="project_${element.slug}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -367,7 +366,7 @@
                 for(let i = 0; i < preview.length; i++) {
                     document.write(`
                                             <div class="carousel-item ${i == 0 ? 'active' : ''}">
-                                                <img src="assets/img/portfolio/preview/${preview[i]}" class="d-block w-100" loading="lazy">
+                                                <img src="assets/img/loading.gif" data-original="assets/img/portfolio/preview/${preview[i]}" class="d-block w-100 lazy" loading="lazy">
                                             </div>
                     `); 
                 }
@@ -441,7 +440,7 @@
                 document.write(`
                 <div class="col-lg-2 col-md-3 col-6 center-xy">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#certificate_${element.id}">
-                        <img src="assets/img/certificate/${element.img}" class="img-certificate wow fadeInUp" loading="lazy" alt="certificate">
+                        <img src="assets/img/loading.gif" data-original="assets/img/certificate/${element.img}" class="img-certificate wow fadeInUp lazy" loading="lazy" alt="certificate">
                     </a>
                     <!-- Modal -->
                     <div class="modal fade" id="certificate_${element.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -467,7 +466,7 @@
                 for(let i = 0; i < certificate.length; i++) {
                     document.write(`
                                             <div class="carousel-item ${element.id == i ? 'active' : ''}">
-                                                <img src="assets/img/certificate/${certificate[i].img}" class="d-block w-100" loading="lazy">
+                                                <img src="assets/img/loading.gif" data-original="assets/img/certificate/${certificate[i].img}" class="d-block w-100 lazy" loading="lazy">
                                             </div>
                     `); 
                 }
@@ -550,6 +549,15 @@
     </div>
     </footer>
 
+    <!-- source -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://webmap2.map.bdimg.com/yyfm/jQuery_1.x/1.10.2/js/jQuery_1.x.min.js"></script>
+    <script src="assets/js/lazyload.js"></script>
+    <script>
+    $('img.lazy').lazyload({
+        threshold: 1000
+    });
+    </script>
+
 </body>
 </html>
