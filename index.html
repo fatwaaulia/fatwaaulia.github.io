@@ -81,7 +81,7 @@
                         <a class="nav-link scroll-link" href="#" data-target="certificate">Certificate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll-link" href="#" data-contact="portfolio">Contact</a>
+                        <a class="nav-link scroll-link" href="#" data-target="contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -366,7 +366,7 @@
                 for(let i = 0; i < preview.length; i++) {
                     document.write(`
                                             <div class="carousel-item ${i == 0 ? 'active' : ''}">
-                                                <img src="assets/img/loading.gif" data-original="assets/img/portfolio/preview/${preview[i]}" class="d-block w-100 lazy" loading="lazy">
+                                                <img src="assets/img/portfolio/preview/${preview[i]}" class="d-block w-100" loading="lazy">
                                             </div>
                     `); 
                 }
@@ -440,7 +440,7 @@
                 document.write(`
                 <div class="col-lg-2 col-md-3 col-6 center-xy">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#certificate_${element.id}">
-                        <img src="assets/img/loading.gif" data-original="assets/img/certificate/${element.img}" class="img-certificate wow fadeInUp lazy" loading="lazy" alt="certificate">
+                        <img src="assets/img/loading.gif" data-original="assets/img/certificate/${element.img}" class="img-certificate wow fadeInUp lazy" loading="lazy" alt="${element.img}">
                     </a>
                     <!-- Modal -->
                     <div class="modal fade" id="certificate_${element.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -466,7 +466,7 @@
                 for(let i = 0; i < certificate.length; i++) {
                     document.write(`
                                             <div class="carousel-item ${element.id == i ? 'active' : ''}">
-                                                <img src="assets/img/loading.gif" data-original="assets/img/certificate/${certificate[i].img}" class="d-block w-100 lazy" loading="lazy">
+                                                <img src="assets/img/certificate/${certificate[i].img}" class="d-block w-100" loading="lazy">
                                             </div>
                     `); 
                 }
