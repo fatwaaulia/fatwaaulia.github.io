@@ -203,6 +203,10 @@
                     <p class="wow fadeInUp">Programming Languages & Tools</p>
                 </div>
                 <div class="row row-gap-4">
+                    <style>
+                    .card-skills { transition: .1s; }
+                    .card-skills:hover { border: 2px solid cornflowerblue; background: rgb(193, 215, 255); }
+                    </style>
                     <script>
                     const skills = [
                         'html.png',
@@ -214,11 +218,17 @@
                         'codeigniter.png',
                         'laravel.png',
                         'mysql.png',
+                        'postman.png',
+                        'figma.png',
                     ]
                     for (let i = 0; i < skills.length; i++) {
                         document.write(`
-                        <div class="col-lg-2 col-md-2 col-3 center-xy">
-                            <img src="assets/img/loading.gif" data-original="assets/img/skills/${skills[i]}" class="wow fadeInUp w-100 lazy">
+                        <div class="col-lg-2 col-md-2 col-3">
+                            <div class="card card-skills ratio ratio-1x1">
+                                <div class="card-body align-content-center">
+                                    <img src="assets/img/loading.gif" data-original="assets/img/skills/${skills[i]}" class="wow fadeInUp w-100 lazy">
+                                </div>
+                            </div>
                         </div>
                         `)
                     }
@@ -337,7 +347,7 @@
             ].sort( () => .5 - Math.random() );
             portfolio.forEach(element => {
                 document.write(`
-                <div class="col-xl-2 col-lg-3 col-md-4 col-6 center-xy">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6 align-content-center">
                     <a href="#!" data-bs-toggle="modal" data-bs-target="#project_${element.slug}">
                         <img src="assets/img/loading.gif" data-original="assets/img/portfolio/${element.img}" class="img-portfolio wow fadeInUp lazy" loading="lazy" alt="${element.name}" title="${element.name}">
                     </a>
@@ -438,7 +448,7 @@
             ];
             certificate.forEach(element => {
                 document.write(`
-                <div class="col-lg-2 col-md-3 col-6 center-xy">
+                <div class="col-lg-2 col-md-3 col-6 align-content-center">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#certificate_${element.id}">
                         <img src="assets/img/loading.gif" data-original="assets/img/certificate/${element.img}" class="img-certificate wow fadeInUp lazy" loading="lazy" alt="${element.img}">
                     </a>
